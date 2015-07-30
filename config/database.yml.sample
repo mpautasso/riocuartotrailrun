@@ -1,0 +1,22 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: 5
+  username: riocuartotrailrun
+  password:
+
+development:
+  <<: *default
+  database: riocuartotrailrun_development
+
+test:
+  <<: *default
+  database: riocuartotrailrun_test
+
+production:
+  <<: *default
+  database: riocuartotrailrun_production
+  username: riocuartotrailrun
+  password: <%= ENV['THEPNET_DATABASE_PASSWORD'] %>
