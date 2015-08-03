@@ -42,4 +42,5 @@ group :development do
   gem 'pry-rescue'
   gem 'quiet_assets'
   gem 'rails-erd'
+  gem 'awesome_print'
 end
